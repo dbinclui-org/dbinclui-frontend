@@ -1,6 +1,8 @@
 export default function Home() {
     return (
-        <p>Teste home</p>
+        <>
+        <input type="text" className="box-busca" placeholder="Pesquise aqui"/>
+        </>
     )
 }
 
