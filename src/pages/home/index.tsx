@@ -1,6 +1,5 @@
 import React from 'react';
 import './style.css';
-import Row from 'react-bootstrap';
 
 
 
@@ -20,8 +19,6 @@ export default function Home() {
         
 
         <section className="container-center">
-          
-          <Row>
             <div className="box"  role="button" tabIndex={1} aria-label="TRADUTOR DE LIBRAS">
               <h3 className="title" id="card1" >TRADUTOR DE LIBRAS</h3>
               <div className="box-libras">
@@ -37,7 +34,6 @@ export default function Home() {
               <div className="box-libras">
               </div>
             </div>
-          </Row>
         </section>
 
     </>
