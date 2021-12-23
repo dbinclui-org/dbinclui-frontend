@@ -3,25 +3,9 @@ import { Form } from 'react-bootstrap';
 import { ThemeConsumer } from 'react-bootstrap/esm/ThemeProvider';
 import { Link } from 'react-router-dom';
 import './style.css';
- import Row from 'react-bootstrap';
+ //import Row from 'react-bootstrap';
 
-interface MySearch {
-  busca?: string
-}
-
-function Home() {
-  const [home, setHome] = useState<MySearch>()
-
-  useEffect(() => {
-    fetch('/home', {
-      method: 'post',
-      body: JSON.stringify(home)
-    }).then((res) => {
-
-    }).catch((err) => {
-
-    })
-  },[home])
+export default function Home() {
      
   return (
     <>
@@ -31,9 +15,7 @@ function Home() {
             type="text" 
             className="box-busca" 
             placeholder="pesquise aqui" 
-            role="search"
-            value={home?.busca}
-            onChange={(event) => setHome({...home, busca: event.target.value})}/>
+            role="search"/>
           <p>Bem-vindo ao DBINCLUI, lorem ipsum dolor sit amet, consectetur adipiscing elit. 
             Etiam mattis fringilla dolor, id congue diam rhoncus sit amet. Fusce at lacus metus. 
             Maecenas gravida  finibus ligula, vitae lacinia est. Integer tristique libero non nunc 
@@ -88,5 +70,3 @@ function Home() {
   );
 
 }
-
-export default Home;
