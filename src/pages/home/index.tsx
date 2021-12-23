@@ -3,12 +3,12 @@ import { Form } from 'react-bootstrap';
 import { ThemeConsumer } from 'react-bootstrap/esm/ThemeProvider';
 import { Link } from 'react-router-dom';
 import './style.css';
- //import Row from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 
 export default function Home() {
      
   return (
-    <>
+    <Row>
       <main className="conteudo" role="main">
         <section className="container-home">
           <input 
@@ -66,7 +66,7 @@ export default function Home() {
         </div>
       </section>
 
-    </>
+    </Row>
   );
 
 }
