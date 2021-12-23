@@ -1,45 +1,92 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Form } from 'react-bootstrap';
+import { ThemeConsumer } from 'react-bootstrap/esm/ThemeProvider';
+import { Link } from 'react-router-dom';
 import './style.css';
-import Row from 'react-bootstrap';
+ import Row from 'react-bootstrap';
 
+interface MySearch {
+  busca?: string
+}
 
+function Home() {
+  const [home, setHome] = useState<MySearch>()
 
-export default function Home() {
+  useEffect(() => {
+    fetch('/home', {
+      method: 'post',
+      body: JSON.stringify(home)
+    }).then((res) => {
+
+    }).catch((err) => {
+
+    })
+  },[home])
+     
   return (
     <>
       <main className="conteudo" role="main">
         <section className="container-home">
-          <input type="text" className="box-busca" placeholder="pesquise aqui" role="search" />
-            <p>Bem-vindo ao DBINCLUI, lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Etiam mattis fringilla dolor, id congue diam rhoncus sit amet. Fusce at lacus metus. 
-                Maecenas gravida  finibus ligula, vitae lacinia est. Integer tristique libero non nunc 
-                faucibus elementum. 
+          <input 
+            type="text" 
+            className="box-busca" 
+            placeholder="pesquise aqui" 
+            role="search"
+            value={home?.busca}
+            onChange={(event) => setHome({...home, busca: event.target.value})}/>
+          <p>Bem-vindo ao DBINCLUI, lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Etiam mattis fringilla dolor, id congue diam rhoncus sit amet. Fusce at lacus metus. 
+            Maecenas gravida  finibus ligula, vitae lacinia est. Integer tristique libero non nunc 
+            faucibus elementum. 
           </p>
         </section>
-        </main>
-        
-
-        <section className="container-center">
+      </main>
           
-          <Row>
-            <div className="box"  role="button" tabIndex={1} aria-label="TRADUTOR DE LIBRAS">
-              <h3 className="title" id="card1" >TRADUTOR DE LIBRAS</h3>
-              <div className="box-libras">
-              </div >
-            </div>
-            <div className="box"  role="button" tabIndex={2} aria-label="GUIA DE ACESSIBILIDADE">
-              <h3 className="title" id="card2" >GUIA DE ACESSIBILIDADE</h3>
-              <div className="box-libras">
-              </div>
-            </div>
-            <div className="box" role="button" tabIndex={3} aria-label="GUIA DA CULTURA SURDA">
-              <h3 className="title" id="card3" >GUIA DA CULTURA SURDA</h3>
-              <div className="box-libras">
-              </div>
-            </div>
-          </Row>
-        </section>
+      <section className="container-center">
+        <div 
+          className="box"  
+          role="button" 
+          tabIndex={1} 
+          aria-label="TRADUTOR DE LIBRAS">
+            <h3 className="title" id="card1">TRADUTOR DE LIBRAS</h3>
+
+          <div className="box-libras">
+            <Link to="">
+              <img src="" alt=""/>
+            </Link>        
+          </div>  
+        </div>
+
+        <div 
+          className="box"  
+          role="button" 
+          tabIndex={2} 
+          aria-label="GUIA DE ACESSIBILIDADE">
+            <h3 className="title" id="card2" >GUIA DE ACESSIBILIDADE</h3>
+          <div className="box-libras">
+            <Link to="">
+              <img src="" alt=""/>
+            </Link>
+          </div>
+        </div>
+
+        <div 
+          className="box" 
+          role="button" 
+          tabIndex={3} 
+          aria-label="GUIA DA CULTURA SURDA">
+            <h3 className="title" id="card3" >GUIA DA CULTURA SURDA</h3>
+          <div className="box-libras">
+            <Link to="">
+              <img src="" alt=""/>
+            </Link>
+          </div>
+        </div>
+      </section>
 
     </>
   );
+
 }
+
+export default Home;

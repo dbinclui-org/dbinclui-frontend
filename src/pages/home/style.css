@@ -42,11 +42,15 @@ p{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(143, 143, 139);
+  background-color: #C4C4C4;
   padding: 90px 146px;
   flex-direction: row;
   margin: 5px;
   border-radius: 20px;
+}
+
+.box-libras:hover {
+  background-color: rgba(12, 12, 12, 0.185);
 }
 
 .title {
