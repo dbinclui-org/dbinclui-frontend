@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './style.css';
 import { Row } from 'react-bootstrap';
 
@@ -36,9 +35,7 @@ export default function Home() {
           </h3>
 
           <div className="box-libras">
-            <Link to="">
-              <img src="" alt="" />
-            </Link>
+            <img src="" alt="" />
           </div>
         </div>
 
@@ -52,9 +49,7 @@ export default function Home() {
             GUIA DE ACESSIBILIDADE
           </h3>
           <div className="box-libras">
-            <Link to="">
-              <img src="" alt="" />
-            </Link>
+            <img src="" alt="" />
           </div>
         </div>
 
@@ -68,9 +63,7 @@ export default function Home() {
             GUIA DA CULTURA SURDA
           </h3>
           <div className="box-libras">
-            <Link to="">
-              <img src="" alt="" />
-            </Link>
+            <img src="" alt="" />
           </div>
         </div>
       </section>
