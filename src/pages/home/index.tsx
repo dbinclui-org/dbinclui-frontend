@@ -1,6 +1,3 @@
-import React, { useEffect, useState } from 'react';
-import { Form } from 'react-bootstrap';
-import { ThemeConsumer } from 'react-bootstrap/esm/ThemeProvider';
 import { Link } from 'react-router-dom';
 import './style.css';
 import { Row } from 'react-bootstrap';
