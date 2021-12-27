@@ -13,7 +13,7 @@ export default function Home() {
             placeholder="pesquise aqui"
             role="search"
           />
-          <p>
+          <p className="box-welcome">
             Bem-vindo ao DBINCLUI, lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Etiam mattis fringilla dolor, id congue diam
             rhoncus sit amet. Fusce at lacus metus. Maecenas gravida finibus
