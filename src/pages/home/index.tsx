@@ -1,10 +1,9 @@
 import React from 'react';
 import './style.css';
-import { Row } from 'react-bootstrap';
 
 export default function Home() {
   return (
-    <Row>
+    <>
       <main className="conteudo" role="main">
         <section className="container-home">
           <input
@@ -67,6 +66,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </Row>
+    </>
   );
 }
