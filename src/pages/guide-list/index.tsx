@@ -173,7 +173,6 @@ export const GuideList: React.FC<
               >
                 Novo
               </Button>
-              <Grid item md={6}>
                 <Button
                   sx={styles.button}
                   variant="contained"
@@ -186,7 +185,6 @@ export const GuideList: React.FC<
                 >
                   Voltar
                 </Button>
-              </Grid>
             </Box>
           </>
         )}
